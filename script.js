@@ -180,12 +180,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuScrollCue = document.getElementById('menuScrollCue');
 
   if (menuTabs && menuScrollCue) {
+    menuScrollCue.addEventListener('click', () => {
+      menuTabs.scrollBy({
+        left: 180,
+        behavior: 'smooth'
+      });
+    });
+
     menuTabs.addEventListener('scroll', () => {
       if (menuTabs.scrollLeft > 15) {
         menuScrollCue.style.opacity = '0';
         menuScrollCue.style.pointerEvents = 'none';
       } else {
         menuScrollCue.style.opacity = '1';
+        menuScrollCue.style.pointerEvents = 'auto';
       }
     });
   }
