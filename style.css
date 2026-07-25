@@ -1193,14 +1193,41 @@ footer {
 
 @media (max-width: 768px) {
   .menu-card {
-    flex-direction: column;
+    flex-direction: row;
+    min-height: 150px;
   }
 
   .menu-card-image {
-    width: 100%;
-    height: 180px;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
+    width: 120px;
+    height: 100%;
+    border-right: 1px solid var(--border-color);
+    border-bottom: none;
+  }
+
+  .menu-card-info {
+    padding: 15px 20px;
+    gap: 4px;
+  }
+
+  .menu-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin-bottom: 5px;
+  }
+
+  .menu-card-header h3 {
+    font-size: 16px;
+  }
+
+  .menu-card-header .price {
+    font-size: 15px;
+    margin-top: 2px;
+  }
+
+  .menu-desc {
+    font-size: 12.5px;
+    line-height: 1.5;
   }
 
   .hero-buttons {
