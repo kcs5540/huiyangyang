@@ -483,19 +483,41 @@ header.scrolled {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   overflow: hidden;
-  padding: 35px 30px;
-  position: relative;
   transition: var(--transition-smooth);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 180px;
 }
 
 .menu-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary-color);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.menu-card-image {
+  height: 180px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-color: #000000;
+}
+
+.menu-card-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  pointer-events: none;
+}
+
+.menu-card-info {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menu-card-badge {
