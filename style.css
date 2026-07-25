@@ -441,6 +441,10 @@ header.scrolled {
   width: 100%;
 }
 
+.scroll-cue {
+  display: none;
+}
+
 .menu-tabs {
   display: flex;
   justify-content: center;
@@ -1292,6 +1296,32 @@ footer {
     background: linear-gradient(to right, rgba(10, 10, 12, 0), rgba(10, 10, 12, 0.95));
     pointer-events: none;
     z-index: 5;
+  }
+
+  .scroll-cue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    background-color: var(--primary-color);
+    color: var(--bg-black);
+    border-radius: 50%;
+    font-size: 10px;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    animation: bounceRight 1.5s infinite;
+  }
+
+  @keyframes bounceRight {
+    0%, 100% { transform: translate(0, -50%); opacity: 0.8; }
+    50% { transform: translate(4px, -50%); opacity: 1; }
   }
 
   .menu-tabs::-webkit-scrollbar {

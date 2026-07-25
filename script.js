@@ -174,4 +174,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 7. 모바일 탭 가로 스크롤 화살표 힌트 제어
+  const menuTabs = document.querySelector('.menu-tabs');
+  const menuScrollCue = document.getElementById('menuScrollCue');
+
+  if (menuTabs && menuScrollCue) {
+    menuTabs.addEventListener('scroll', () => {
+      if (menuTabs.scrollLeft > 15) {
+        menuScrollCue.style.opacity = '0';
+        menuScrollCue.style.pointerEvents = 'none';
+      } else {
+        menuScrollCue.style.opacity = '1';
+      }
+    });
+  }
 });
