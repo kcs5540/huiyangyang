@@ -144,36 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. 전체 메뉴판 원본 이미지 모달 제어
-  const btnViewMenuBoard = document.getElementById('btnViewMenuBoard');
-  const menuBoardModal = document.getElementById('menuBoardModal');
-  const menuBoardClose = document.getElementById('menuBoardClose');
-  const menuBoardBottomClose = document.getElementById('menuBoardBottomClose');
-  const menuBoardImg = document.getElementById('menuBoardImg');
 
-  if (btnViewMenuBoard && menuBoardModal) {
-    btnViewMenuBoard.addEventListener('click', () => {
-      menuBoardModal.classList.add('active');
-    });
-  }
-
-  const closeMenuBoard = () => {
-    if (menuBoardModal) {
-      menuBoardModal.classList.remove('active');
-    }
-  };
-
-  if (menuBoardClose) menuBoardClose.addEventListener('click', closeMenuBoard);
-  if (menuBoardBottomClose) menuBoardBottomClose.addEventListener('click', closeMenuBoard);
-  if (menuBoardImg) menuBoardImg.addEventListener('click', closeMenuBoard);
-
-  if (menuBoardModal) {
-    menuBoardModal.addEventListener('click', (e) => {
-      if (e.target === menuBoardModal) {
-        closeMenuBoard();
-      }
-    });
-  }
 
   // 7. 모바일 탭 가로 스크롤 화살표 힌트 제어
   const menuTabs = document.querySelector('.menu-tabs');
