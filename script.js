@@ -143,4 +143,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 6. 전체 메뉴판 원본 이미지 모달 제어
+  const btnViewMenuBoard = document.getElementById('btnViewMenuBoard');
+  const menuBoardModal = document.getElementById('menuBoardModal');
+  const menuBoardClose = document.getElementById('menuBoardClose');
+
+  if (btnViewMenuBoard && menuBoardModal) {
+    btnViewMenuBoard.addEventListener('click', () => {
+      menuBoardModal.classList.add('active');
+    });
+  }
+
+  if (menuBoardClose) {
+    menuBoardClose.addEventListener('click', () => {
+      menuBoardModal.classList.remove('active');
+    });
+  }
+
+  if (menuBoardModal) {
+    menuBoardModal.addEventListener('click', (e) => {
+      if (e.target === menuBoardModal) {
+        menuBoardModal.classList.remove('active');
+      }
+    });
+  }
 });

@@ -138,9 +138,7 @@
         <div class="menu-grid">
           <!-- Menu 1 -->
           <div class="menu-card">
-            <div class="menu-card-image" style="background-image: url('images/menu1.jpg');">
-              <div class="menu-card-badge">대표</div>
-            </div>
+            <div class="menu-card-badge">대표</div>
             <div class="menu-card-info">
               <div class="menu-card-header">
                 <h3>프렌치랙 <span class="sub-name">French Rack</span></h3>
@@ -152,9 +150,7 @@
           
           <!-- Menu 2 -->
           <div class="menu-card">
-            <div class="menu-card-image" style="background-image: url('images/menu2.jpg');">
-              <div class="menu-card-badge">대표</div>
-            </div>
+            <div class="menu-card-badge">대표</div>
             <div class="menu-card-info">
               <div class="menu-card-header">
                 <h3>숄더렉 <span class="sub-name">Shoulder Rack</span></h3>
@@ -166,7 +162,6 @@
 
           <!-- Menu 3 -->
           <div class="menu-card">
-            <div class="menu-card-image" style="background-image: url('images/menu3.jpg');"></div>
             <div class="menu-card-info">
               <div class="menu-card-header">
                 <h3>양념 꽃갈비살 <span class="sub-name">Marinated Rib Meat</span></h3>
@@ -178,7 +173,6 @@
 
           <!-- Menu 4 -->
           <div class="menu-card">
-            <div class="menu-card-image" style="background-image: url('images/menu4.jpg');"></div>
             <div class="menu-card-info">
               <div class="menu-card-header">
                 <h3>양등심 <span class="sub-name">Lamb Loin</span></h3>
@@ -195,9 +189,7 @@
         <div class="menu-grid">
           <!-- Side 1 -->
           <div class="menu-card">
-            <div class="menu-card-image" style="background-image: url('images/menu5.jpg');">
-              <div class="menu-card-badge">강추</div>
-            </div>
+            <div class="menu-card-badge">강추</div>
             <div class="menu-card-info">
               <div class="menu-card-header">
                 <h3>명품 가지튀김 <span class="sub-name">Fried Eggplant</span></h3>
@@ -209,9 +201,7 @@
           
           <!-- Side 2 -->
           <div class="menu-card">
-            <div class="menu-card-image" style="background-image: url('images/menu6.jpg');">
-              <div class="menu-card-badge">인기</div>
-            </div>
+            <div class="menu-card-badge">인기</div>
             <div class="menu-card-info">
               <div class="menu-card-header">
                 <h3>김치 옥수수국수 <span class="sub-name">Kimchi Corn Noodle</span></h3>
@@ -223,7 +213,6 @@
 
           <!-- Side 3 -->
           <div class="menu-card">
-            <div class="menu-card-image" style="background-image: url('images/menu7.jpg');"></div>
             <div class="menu-card-info">
               <div class="menu-card-header">
                 <h3>수제 고기 딤섬 <span class="sub-name">Dim Sum</span></h3>
@@ -235,9 +224,7 @@
 
           <!-- Side 4 -->
           <div class="menu-card">
-            <div class="menu-card-image" style="background-image: url('images/menu_all.jpg');">
-              <div class="menu-card-badge">기본 제공</div>
-            </div>
+            <div class="menu-card-badge">기본 제공</div>
             <div class="menu-card-info">
               <div class="menu-card-header">
                 <h3>서비스 양갈비탕 <span class="sub-name">Lamb Rib Soup</span></h3>
@@ -247,6 +234,11 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- View All Menu Button -->
+      <div class="view-all-menu-container text-center" style="margin-top: 50px;">
+        <button id="btnViewMenuBoard" class="btn btn-outline"><i class="fa-solid fa-image"></i> 전체 메뉴판 이미지 크게 보기</button>
       </div>
     </div>
   </section>
@@ -591,6 +583,14 @@
       <h2>예약 신청이 완료되었습니다!</h2>
       <p>작성하신 정보로 예약을 접수하였습니다. 매장에서 신속히 확인하여 연락처(<span id="modalPhone"></span>)로 확정 전화를 드리겠습니다.</p>
       <button class="btn btn-primary" id="modalClose">확인</button>
+    </div>
+  </div>
+
+  <!-- Menu Board Image Modal -->
+  <div class="modal" id="menuBoardModal">
+    <div class="modal-content" style="max-width: 800px; padding: 25px; position: relative;">
+      <button id="menuBoardClose" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: var(--text-white); font-size: 24px; cursor: pointer; z-index: 10;"><i class="fa-solid fa-xmark"></i></button>
+      <img src="images/menu_all.jpg" alt="희양양 전체 메뉴판 원본" style="width: 100%; border-radius: var(--border-radius); box-shadow: var(--box-shadow); display: block;">
     </div>
   </div>
 
