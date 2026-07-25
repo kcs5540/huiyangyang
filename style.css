@@ -1180,6 +1180,22 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .hero-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+
+  .hero-buttons .btn {
+    padding: 10px 16px;
+    font-size: 13.5px;
+    margin: 0 !important;
+    white-space: nowrap;
+    text-align: center;
+    letter-spacing: 0px;
+  }
+
   .hero-content .main-title {
     font-size: 36px;
   }
