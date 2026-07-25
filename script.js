@@ -148,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnViewMenuBoard = document.getElementById('btnViewMenuBoard');
   const menuBoardModal = document.getElementById('menuBoardModal');
   const menuBoardClose = document.getElementById('menuBoardClose');
+  const menuBoardBottomClose = document.getElementById('menuBoardBottomClose');
+  const menuBoardImg = document.getElementById('menuBoardImg');
 
   if (btnViewMenuBoard && menuBoardModal) {
     btnViewMenuBoard.addEventListener('click', () => {
@@ -155,16 +157,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (menuBoardClose) {
-    menuBoardClose.addEventListener('click', () => {
+  const closeMenuBoard = () => {
+    if (menuBoardModal) {
       menuBoardModal.classList.remove('active');
-    });
-  }
+    }
+  };
+
+  if (menuBoardClose) menuBoardClose.addEventListener('click', closeMenuBoard);
+  if (menuBoardBottomClose) menuBoardBottomClose.addEventListener('click', closeMenuBoard);
+  if (menuBoardImg) menuBoardImg.addEventListener('click', closeMenuBoard);
 
   if (menuBoardModal) {
     menuBoardModal.addEventListener('click', (e) => {
       if (e.target === menuBoardModal) {
-        menuBoardModal.classList.remove('active');
+        closeMenuBoard();
       }
     });
   }
