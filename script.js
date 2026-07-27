@@ -168,4 +168,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 8. 히어로 배경 슬라이더
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length > 0) {
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+  }
 });
